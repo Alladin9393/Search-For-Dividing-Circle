@@ -1,0 +1,22 @@
+language: python
+
+sudo: required
+
+dist: xenial
+
+python:
+  - "3.6"
+  - "3.7"
+
+install:
+  - pip install -r requirements.txt
+  - pip install -r requirements-tests.txt
+
+script:
+  - radon cc cli -nb --total-average
+  - cat requirements.txt requirements-tests.txt | safety check --stdin
+  - flake8 model
+
+after_success:
+  - coverage report -m && coverage xml
+  - bash <(curl -s https://codecov.io/bash)
