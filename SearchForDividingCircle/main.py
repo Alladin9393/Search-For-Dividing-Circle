@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from SearchForDividingCircle.DividingCircle.DividingCircle import DividingCircle
+from SearchForDividingCircle.DividingCircle import DividingCircle
 
 if __name__ == '__main__':
     center_circle_start_coordinates = {
@@ -18,7 +18,7 @@ if __name__ == '__main__':
         radius_range=(1, 7),
         center_circle_start_coordinates=center_circle_start_coordinates,
         center_circle_end_coordinates=center_circle_end_coordinates,
-        amount_points=1000,
+        amount_points=1500,
     )
 
     DC.generate_points()
