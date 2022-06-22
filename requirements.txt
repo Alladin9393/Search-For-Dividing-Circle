@@ -11,4 +11,4 @@ pypi-version==0.2.0
 radon==3.0.3
 safety==1.8.5
 
-numpy==1.18.1
+numpy==1.22.0
